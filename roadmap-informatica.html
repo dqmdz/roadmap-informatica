@@ -421,11 +421,19 @@
                     // Display connections
                     if (connections) {
                         const connectionIds = connections.split(',');
-                        const connectionNames = connectionIds.map(id => {
+                        const connectionItems = connectionIds.map(id => {
                             const connSubject = document.getElementById(id);
-                            return connSubject ? connSubject.textContent : id;
+                            if (connSubject) {
+                                const fullText = connSubject.textContent;
+                                const parts = fullText.split('-');
+                                const title = parts[0].trim();
+                                const content = parts.length > 1 ? '-' + parts.slice(1).join('-') : '';
+                                return `<strong>${title}</strong>${content}`;
+                            } else {
+                                return id;
+                            }
                         });
-                        modalConnections.innerHTML = connectionNames.join(', ');
+                        modalConnections.innerHTML = connectionItems.join(', ');
                     } else {
                         modalConnections.innerHTML = 'Ninguna';
                     }
