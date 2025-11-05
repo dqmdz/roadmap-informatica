@@ -151,52 +151,10 @@
         .stat { text-align: center; }
         .stat-number { font-size: 2em; font-weight: bold; color: #3498db; }
 
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .modal-content h3 {
-            margin-top: 20px;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-        #modal-connections h4 {
-            margin-top: 10px;
-            color: #3498db;
-        }
-        #modal-connections ul {
-            list-style-position: inside;
-            padding-left: 10px;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: black;
+        .selected {
+            border-color: #c0392b !important;
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(192, 57, 43, 0.6) !important;
         }
 
         .highlighted {
@@ -239,11 +197,11 @@
                 <div class="connection-line horizontal"></div>
                 <div class="year-label">AÑO 2</div>
                 <div class="subjects-row">
-                    <div class="subject" id="A2" data-content="- Python<br/>- Planilla de Cálculo<br/>- Arduino<br/>- Redes<br/>- Proyecto" data-connections="A1,A3,B3,C3,D3">
+                    <div class="subject" id="A2" data-content="- Python<br/>- Planilla de Cálculo<br/>- Arduino<br/>- Redes<br/>- Proyecto" data-connections="A1,A3,B3,G4">
                         <div class="subject-title">Taller Técnico II</div>
                         <div class="subject-content">- Python<br/>- Planilla de Cálculo<br/>- Arduino<br/>- Redes<br/>- Proyecto</div>
                     </div>
-                    <div class="subject" id="B2" data-content="- Introducción a la Tecnología<br/>- Procesos Tecnológicos<br/>- Medios Tecnológicos<br/>- Reflexión sobre Tecnología<br/>- Proyecto Tecnológico" data-connections="A1,A3,B3,C3,D3">
+                    <div class="subject" id="B2" data-content="- Introducción a la Tecnología<br/>- Procesos Tecnológicos<br/>- Medios Tecnológicos<br/>- Reflexión sobre Tecnología<br/>- Proyecto Tecnológico" data-connections="A1,C3,D3">
                         <div class="subject-title">Educación Tecnológica</div>
                         <div class="subject-content">- Introducción a la Tecnología<br/>- Procesos Tecnológicos<br/>- Medios Tecnológicos<br/>- Reflexión sobre Tecnología<br/>- Proyecto Tecnológico</div>
                     </div>
@@ -256,19 +214,19 @@
                 <div class="connection-line horizontal"></div>
                 <div class="year-label">AÑO 3</div>
                 <div class="subjects-row">
-                    <div class="subject" id="A3" data-content="- Planillas de Cálculo<br/>- Funciones Matemáticas<br/>- Funciones de Búsqueda<br/>- Manejo de Listas<br/>- Programación en Excel<br/>- Procesador de Textos<br/>- Organigramas<br/>- Formularios" data-connections="A2,B2,A4,B4,C4,D4,E4,F4,G4">
+                    <div class="subject" id="A3" data-content="- Planillas de Cálculo<br/>- Funciones Matemáticas<br/>- Funciones de Búsqueda<br/>- Manejo de Listas<br/>- Programación en Excel<br/>- Procesador de Textos<br/>- Organigramas<br/>- Formularios" data-connections="A2,A4">
                         <div class="subject-title">Ofimática</div>
                         <div class="subject-content">- Planillas de Cálculo<br/>- Funciones Matemáticas<br/>- Funciones de Búsqueda<br/>- Manejo de Listas<br/>- Programación en Excel<br/>- Procesador de Textos<br/>- Organigramas<br/>- Formularios</div>
                     </div>
-                    <div class="subject" id="B3" data-content="- Algoritmia<br/>- Pseint<br/>- Python<br/>- Tipos de Datos<br/>- Estructuras<br/>- Funciones<br/>- Librerías Gráficas" data-connections="A2,B2,A4,B4,C4,D4,E4,F4,G4">
+                    <div class="subject" id="B3" data-content="- Algoritmia<br/>- Pseint<br/>- Python<br/>- Tipos de Datos<br/>- Estructuras<br/>- Funciones<br/>- Librerías Gráficas" data-connections="A2,E4,A4">
                         <div class="subject-title">Programación I</div>
                         <div class="subject-content">- Algoritmia<br/>- Pseint<br/>- Python<br/>- Tipos de Datos<br/>- Estructuras<br/>- Funciones<br/>- Librerías Gráficas</div>
                     </div>
-                    <div class="subject" id="C3" data-content="- Software de Programación<br/>- Instalación de Aplicaciones<br/>- Tipos de Software<br/>- Licencias<br/>- Multimedia<br/>- Navegadores<br/>- Extensiones" data-connections="A2,B2,A4,B4,C4,D4,E4,F4,G4">
+                    <div class="subject" id="C3" data-content="- Software de Programación<br/>- Instalación de Aplicaciones<br/>- Tipos de Software<br/>- Licencias<br/>- Multimedia<br/>- Navegadores<br/>- Extensiones" data-connections="B2,F4,C5">
                         <div class="subject-title">Software Aplicación</div>
                         <div class="subject-content">- Software de Programación<br/>- Instalación de Aplicaciones<br/>- Tipos de Software<br/>- Licencias<br/>- Multimedia<br/>- Navegadores<br/>- Extensiones</div>
                     </div>
-                    <div class="subject" id="D3" data-content="- Tecnologías de Información<br/>- Inteligencia Artificial<br/>- Herramientas Comunicación<br/>- Computadoras y Sociedad<br/>- Realidad Aumentada" data-connections="A2,B2,A4,B4,C4,D4,E4,F4,G4">
+                    <div class="subject" id="D3" data-content="- Tecnologías de Información<br/>- Inteligencia Artificial<br/>- Herramientas Comunicación<br/>- Computadoras y Sociedad<br/>- Realidad Aumentada" data-connections="B2,C6">
                         <div class="subject-title">TIC</div>
                         <div class="subject-content">- Tecnologías de Información<br/>- Inteligencia Artificial<br/>- Herramientas Comunicación<br/>- Computadoras y Sociedad<br/>- Realidad Aumentada</div>
                     </div>
@@ -281,31 +239,31 @@
                 <div class="connection-line horizontal"></div>
                 <div class="year-label">AÑO 4</div>
                 <div class="subjects-row">
-                    <div class="subject" id="A4" data-content="- Sistemas de Información<br/>- Ciclo de Vida<br/>- Metodologías<br/>- Diagramas de Flujo<br/>- Bases de Datos<br/>- Diseño de Interfaces" data-connections="A3,B3,C3,D3,A5,B5,C5,D5,E5,F5,B3,E4,D5,F6">
+                    <div class="subject" id="A4" data-content="- Sistemas de Información<br/>- Ciclo de Vida<br/>- Metodologías<br/>- Diagramas de Flujo<br/>- Bases de Datos<br/>- Diseño de Interfaces" data-connections="A3,B3,D5,F6">
                         <div class="subject-title">Análisis Sistemas</div>
                         <div class="subject-content">- Sistemas de Información<br/>- Ciclo de Vida<br/>- Metodologías<br/>- Diagramas de Flujo<br/>- Bases de Datos<br/>- Diseño de Interfaces</div>
                     </div>
-                    <div class="subject" id="B4" data-content="- Arquitectura Computacional<br/>- Software del Sistema<br/>- Taxonomía<br/>- Unidad Central<br/>- Dispositivos E/S<br/>- Memorias" data-connections="A3,B3,C3,D3,A5,B5,C5,D5,E5,F5,C4,D4,F4">
+                    <div class="subject" id="B4" data-content="- Arquitectura Computacional<br/>- Software del Sistema<br/>- Taxonomía<br/>- Unidad Central<br/>- Dispositivos E/S<br/>- Memorias" data-connections="C4,D4,F4,B5">
                         <div class="subject-title">Arquitectura PC</div>
                         <div class="subject-content">- Arquitectura Computacional<br/>- Software del Sistema<br/>- Taxonomía<br/>- Unidad Central<br/>- Dispositivos E/S<br/>- Memorias</div>
                     </div>
-                    <div class="subject" id="C4" data-content="- Componentes Internos<br/>- Componentes Externos<br/>- Drivers<br/>- Compatibilidad<br/>- Mantenimiento Básico" data-connections="A3,B3,C3,D3,A5,B5,C5,D5,E5,F5,B4,D4">
+                    <div class="subject" id="C4" data-content="- Componentes Internos<br/>- Componentes Externos<br/>- Drivers<br/>- Compatibilidad<br/>- Mantenimiento Básico" data-connections="B4,D4,B5">
                         <div class="subject-title">Lab Hardware</div>
                         <div class="subject-content">- Componentes Internos<br/>- Componentes Externos<br/>- Drivers<br/>- Compatibilidad<br/>- Mantenimiento Básico</div>
                     </div>
-                    <div class="subject" id="D4" data-content="- Instalación de Componentes<br/>- Testeo y Análisis<br/>- Mantenimiento<br/>- Herramientas<br/>- Ergonomía" data-connections="A3,B3,C3,D3,A5,B5,C5,D5,E5,F5,B4,C4">
+                    <div class="subject" id="D4" data-content="- Instalación de Componentes<br/>- Testeo y Análisis<br/>- Mantenimiento<br/>- Herramientas<br/>- Ergonomía" data-connections="B4,C4,B5">
                         <div class="subject-title">Mantenimiento HW</div>
                         <div class="subject-content">- Instalación de Componentes<br/>- Testeo y Análisis<br/>- Mantenimiento<br/>- Herramientas<br/>- Ergonomía</div>
                     </div>
-                    <div class="subject" id="E4" data-content="- Programación Orientada a Objetos<br/>- Versionado<br/>- PyQt<br/>- Pygame<br/>- C++<br/>- Interfaz Gráfica" data-connections="A3,B3,C3,D3,A5,B5,C5,D5,E5,F5,B3,D5">
+                    <div class="subject" id="E4" data-content="- Programación Orientada a Objetos<br/>- Versionado<br/>- PyQt<br/>- Pygame<br/>- C++<br/>- Interfaz Gráfica" data-connections="B3,D5">
                         <div class="subject-title">Programación II</div>
                         <div class="subject-content">- Programación Orientada a Objetos<br/>- Versionado<br/>- PyQt<br/>- Pygame<br/>- C++<br/>- Interfaz Gráfica</div>
                     </div>
-                    <div class="subject" id="F4" data-content="- Consideraciones Generales<br/>- Procesos<br/>- Gestión E/S<br/>- Gestión de Archivos<br/>- Instalación y Configuración" data-connections="A3,B3,C3,D3,A5,B5,C5,D5,E5,F5,B4,A5,B5,F5">
+                    <div class="subject" id="F4" data-content="- Consideraciones Generales<br/>- Procesos<br/>- Gestión E/S<br/>- Gestión de Archivos<br/>- Instalación y Configuración" data-connections="B4,C3,A5,B5,G6">
                         <div class="subject-title">Sistemas Operativos</div>
                         <div class="subject-content">- Consideraciones Generales<br/>- Procesos<br/>- Gestión E/S<br/>- Gestión de Archivos<br/>- Instalación y Configuración</div>
                     </div>
-                    <div class="subject" id="G4" data-content="- Sistemas de Comunicación<br/>- Modelo OSI<br/>- Redes de Computadoras<br/>- Packet Tracer<br/>- Configuración de Redes" data-connections="A3,B3,C3,D3,A5,B5,C5,D5,E5,F5,A5,F5">
+                    <div class="subject" id="G4" data-content="- Sistemas de Comunicación<br/>- Modelo OSI<br/>- Redes de Computadoras<br/>- Packet Tracer<br/>- Configuración de Redes" data-connections="A2,A5,F5">
                         <div class="subject-title">Teleinformática</div>
                         <div class="subject-content">- Sistemas de Comunicación<br/>- Modelo OSI<br/>- Redes de Computadoras<br/>- Packet Tracer<br/>- Configuración de Redes</div>
                     </div>
@@ -318,27 +276,27 @@
                 <div class="connection-line horizontal"></div>
                 <div class="year-label">AÑO 5</div>
                 <div class="subjects-row">
-                    <div class="subject" id="A5" data-content="- Redes LAN<br/>- IP Estáticas/Dinámicas<br/>- DHCP<br/>- DNS<br/>- Servidores Web<br/>- Cableado Estructurado<br/>- VPN<br/>- Ataques de Red" data-connections="A4,B4,C4,D4,E4,F4,G4,A6,B6,C6,D6,E6,F6,G6,F4,G4,B6">
+                    <div class="subject" id="A5" data-content="- Redes LAN<br/>- IP Estáticas/Dinámicas<br/>- DHCP<br/>- DNS<br/>- Servidores Web<br/>- Cableado Estructurado<br/>- VPN<br/>- Ataques de Red" data-connections="F4,G4,B6,G6">
                         <div class="subject-title">Lab Redes I</div>
                         <div class="subject-content">- Redes LAN<br/>- IP Estáticas/Dinámicas<br/>- DHCP<br/>- DNS<br/>- Servidores Web<br/>- Cableado Estructurado<br/>- VPN<br/>- Ataques de Red</div>
                     </div>
-                    <div class="subject" id="B5" data-content="- Placas de Red<br/>- Switches<br/>- Routers<br/>- Access Points<br/>- Voz sobre IP<br/>- Redes FTTH<br/>- Cluster Proxmox" data-connections="A4,B4,C4,D4,E4,F4,G4,A6,B6,C6,D6,E6,F6,G6,F4,A6,B6">
+                    <div class="subject" id="B5" data-content="- Placas de Red<br/>- Switches<br/>- Routers<br/>- Access Points<br/>- Voz sobre IP<br/>- Redes FTTH<br/>- Cluster Proxmox" data-connections="B4,C4,D4,F4,A6,B6">
                         <div class="subject-title">Lab Hardware II</div>
                         <div class="subject-content">- Placas de Red<br/>- Switches<br/>- Routers<br/>- Access Points<br/>- Voz sobre IP<br/>- Redes FTTH<br/>- Cluster Proxmox</div>
                     </div>
-                    <div class="subject" id="C5" data-content="- Tipos de Mantenimiento<br/>- Problemas de Software<br/>- Resguardo de Datos<br/>- Pruebas de Software<br/>- Automatización" data-connections="A4,B4,C4,D4,E4,F4,G4,A6,B6,C6,D6,E6,F6,G6">
+                    <div class="subject" id="C5" data-content="- Tipos de Mantenimiento<br/>- Problemas de Software<br/>- Resguardo de Datos<br/>- Pruebas de Software<br/>- Automatización" data-connections="C3,D6">
                         <div class="subject-title">Mantenimiento SW</div>
                         <div class="subject-content">- Tipos de Mantenimiento<br/>- Problemas de Software<br/>- Resguardo de Datos<br/>- Pruebas de Software<br/>- Automatización</div>
                     </div>
-                    <div class="subject" id="D5" data-content="- Backend<br/>- Frontend<br/>- HTML/CSS/JavaScript<br/>- React<br/>- Node.js<br/>- MySQL<br/>- Versionado" data-connections="A4,B4,C4,D4,E4,F4,G4,A6,B6,C6,D6,E6,F6,G6,A4,E4,E6,F6">
+                    <div class="subject" id="D5" data-content="- Backend<br/>- Frontend<br/>- HTML/CSS/JavaScript<br/>- React<br/>- Node.js<br/>- MySQL<br/>- Versionado" data-connections="A4,E4,E6,F6">
                         <div class="subject-title">Programación III</div>
                         <div class="subject-content">- Backend<br/>- Frontend<br/>- HTML/CSS/JavaScript<br/>- React<br/>- Node.js<br/>- MySQL<br/>- Versionado</div>
                     </div>
-                    <div class="subject" id="E5" data-content="- Almacenamiento de Datos<br/>- Calidad de Datos<br/>- Protección de Datos<br/>- Big Data<br/>- Cloud<br/>- Metadatos" data-connections="A4,B4,C4,D4,E4,F4,G4,A6,B6,C6,D6,E6,F6,G6,G6">
+                    <div class="subject" id="E5" data-content="- Almacenamiento de Datos<br/>- Calidad de Datos<br/>- Protección de Datos<br/>- Big Data<br/>- Cloud<br/>- Metadatos" data-connections="G6">
                         <div class="subject-title">Protección Datos</div>
                         <div class="subject-content">- Almacenamiento de Datos<br/>- Calidad de Datos<br/>- Protección de Datos<br/>- Big Data<br/>- Cloud<br/>- Metadatos</div>
                     </div>
-                    <div class="subject" id="F5" data-content="- Redes de Computadoras<br/>- Topologías<br/>- Modelo OSI/TCP-IP<br/>- Direccionamiento IP<br/>- Protocolos<br/>- Cableado<br/>- Seguridad Básica" data-connections="A4,B4,C4,D4,E4,F4,G4,A6,B6,C6,D6,E6,F6,G6,F4,G4,A6,B6,G6">
+                    <div class="subject" id="F5" data-content="- Redes de Computadoras<br/>- Topologías<br/>- Modelo OSI/TCP-IP<br/>- Direccionamiento IP<br/>- Protocolos<br/>- Cableado<br/>- Seguridad Básica" data-connections="G4,A6,B6,G6">
                         <div class="subject-title">Redes Locales</div>
                         <div class="subject-content">- Redes de Computadoras<br/>- Topologías<br/>- Modelo OSI/TCP-IP<br/>- Direccionamiento IP<br/>- Protocolos<br/>- Cableado<br/>- Seguridad Básica</div>
                     </div>
@@ -351,31 +309,31 @@
                 <div class="connection-line horizontal"></div>
                 <div class="year-label">AÑO 6</div>
                 <div class="subjects-row">
-                    <div class="subject" id="A6" data-content="- Sistemas de Comunicación<br/>- Modulación<br/>- Conmutación<br/>- Codificación<br/>- Redes Alámbricas<br/>- Modems<br/>- Evolución de Redes" data-connections="A5,B5,C5,D5,E5,F5,A5,B5,F5,B6">
+                    <div class="subject" id="A6" data-content="- Sistemas de Comunicación<br/>- Modulación<br/>- Conmutación<br/>- Codificación<br/>- Redes Alámbricas<br/>- Modems<br/>- Evolución de Redes" data-connections="B5,F5">
                         <div class="subject-title">Comunicación Datos</div>
                         <div class="subject-content">- Sistemas de Comunicación<br/>- Modulación<br/>- Conmutación<br/>- Codificación<br/>- Redes Alámbricas<br/>- Modems<br/>- Evolución de Redes</div>
                     </div>
-                    <div class="subject" id="B6" data-content="- Servicios Web<br/>- DNS<br/>- FTP<br/>- Proxy<br/>- LDAP/AD/DC<br/>- Correo Electrónico<br/>- Servicios Microsoft<br/>- Monitoreo<br/>- Automatización<br/>- CI/CD<br/>- DevOps" data-connections="A5,B5,C5,D5,E5,F5,A5,B5,F5,A6,G6,A6,B6,D6,F6,E6,F6,G6">
+                    <div class="subject" id="B6" data-content="- Servicios Web<br/>- DNS<br/>- FTP<br/>- Proxy<br/>- LDAP/AD/DC<br/>- Correo Electrónico<br/>- Servicios Microsoft<br/>- Monitoreo<br/>- Automatización<br/>- CI/CD<br/>- DevOps" data-connections="A5,B5,F5">
                         <div class="subject-title">Lab Redes II</div>
                         <div class="subject-content">- Servicios Web<br/>- DNS<br/>- FTP<br/>- Proxy<br/>- LDAP/AD/DC<br/>- Correo Electrónico<br/>- Servicios Microsoft<br/>- Monitoreo<br/>- Automatización<br/>- CI/CD<br/>- DevOps</div>
                     </div>
-                    <div class="subject" id="C6" data-content="- Inteligencia Artificial<br/>- Machine Learning<br/>- Deep Learning<br/>- Redes Neuronales<br/>- PNL<br/>- Diseño de Prompts<br/>- TensorFlow<br/>- Google Colab<br/>- LSTM" data-connections="A5,B5,C5,D5,E5,F5">
+                    <div class="subject" id="C6" data-content="- Inteligencia Artificial<br/>- Machine Learning<br/>- Deep Learning<br/>- Redes Neuronales<br/>- PNL<br/>- Diseño de Prompts<br/>- TensorFlow<br/>- Google Colab<br/>- LSTM" data-connections="D3">
                         <div class="subject-title">Lab Software</div>
                         <div class="subject-content">- Inteligencia Artificial<br/>- Machine Learning<br/>- Deep Learning<br/>- Redes Neuronales<br/>- PNL<br/>- Diseño de Prompts<br/>- TensorFlow<br/>- Google Colab<br/>- LSTM</div>
                     </div>
-                    <div class="subject" id="D6" data-content="- Perfil Profesional<br/>- Metodologías Ágiles<br/>- Trabajo Colaborativo<br/>- Contratos<br/>- ODS<br/>- Prácticas en Empresas<br/>- Informes" data-connections="A5,B5,C5,D5,E5,F5,F6">
+                    <div class="subject" id="D6" data-content="- Perfil Profesional<br/>- Metodologías Ágiles<br/>- Trabajo Colaborativo<br/>- Contratos<br/>- ODS<br/>- Prácticas en Empresas<br/>- Informes" data-connections="C5,F6">
                         <div class="subject-title">Prácticas Pro</div>
                         <div class="subject-content">- Perfil Profesional<br/>- Metodologías Ágiles<br/>- Trabajo Colaborativo<br/>- Contratos<br/>- ODS<br/>- Prácticas en Empresas<br/>- Informes</div>
                     </div>
-                    <div class="subject" id="E6" data-content="- Simulador 3D Coche Escuela<br/>- Unity<br/>- C#<br/>- Objetos 3D<br/>- Física<br/>- UI<br/>- Sonido<br/>- Iluminación<br/>- Montaje Físico" data-connections="A5,B5,C5,D5,E5,F5,D5,F6">
+                    <div class="subject" id="E6" data-content="- Simulador 3D Coche Escuela<br/>- Unity<br/>- C#<br/>- Objetos 3D<br/>- Física<br/>- UI<br/>- Sonido<br/>- Iluminación<br/>- Montaje Físico" data-connections="D5,F6">
                         <div class="subject-title">Programación IV</div>
                         <div class="subject-content">- Simulador 3D Coche Escuela<br/>- Unity<br/>- C#<br/>- Objetos 3D<br/>- Física<br/>- UI<br/>- Sonido<br/>- Iluminación<br/>- Montaje Físico</div>
                     </div>
-                    <div class="subject" id="F6" data-content="- Gestión de Proyectos<br/>- Metodologías<br/>- Análisis de Requerimientos<br/>- Diseño de BD<br/>- Interfaces<br/>- Pruebas<br/>- Despliegue<br/>- Capacitación" data-connections="A5,B5,C5,D5,E5,F5,A4,D5,D6,E6,G6">
+                    <div class="subject" id="F6" data-content="- Gestión de Proyectos<br/>- Metodologías<br/>- Análisis de Requerimientos<br/>- Diseño de BD<br/>- Interfaces<br/>- Pruebas<br/>- Despliegue<br/>- Capacitación" data-connections="A4,D5,D6,E6">
                         <div class="subject-title">Proyecto Integrador</div>
                         <div class="subject-content">- Gestión de Proyectos<br/>- Metodologías<br/>- Análisis de Requerimientos<br/>- Diseño de BD<br/>- Interfaces<br/>- Pruebas<br/>- Despliegue<br/>- Capacitación</div>
                     </div>
-                    <div class="subject" id="G6" data-content="- Ciberseguridad<br/>- Amenazas<br/>- Vulnerabilidades<br/>- Dispositivos Seguridad<br/>- VPN<br/>- Criptografía<br/>- Hacking Ético<br/>- Pentesting<br/>- Scripting" data-connections="A5,B5,C5,D5,E5,F5,E5,F5,B6,G6">
+                    <div class="subject" id="G6" data-content="- Ciberseguridad<br/>- Amenazas<br/>- Vulnerabilidades<br/>- Dispositivos Seguridad<br/>- VPN<br/>- Criptografía<br/>- Hacking Ético<br/>- Pentesting<br/>- Scripting" data-connections="F4,A5,E5,F5">
                         <div class="subject-title">Seguridad Informática</div>
                         <div class="subject-content">- Ciberseguridad<br/>- Amenazas<br/>- Vulnerabilidades<br/>- Dispositivos Seguridad<br/>- VPN<br/>- Criptografía<br/>- Hacking Ético<br/>- Pentesting<br/>- Scripting</div>
                     </div>
@@ -403,84 +361,36 @@
         </div>
 
 
-        <!-- Modal for subject details -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 id="modal-title"></h2>
-                <div id="modal-content"></div>
-                <h3>Conexiones:</h3>
-                <div id="modal-connections"></div>
-            </div>
-        </div>
+
 
         <script>
-            // Get modal elements
-            const modal = document.getElementById('modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalContent = document.getElementById('modal-content');
-            const modalConnections = document.getElementById('modal-connections');
-            const closeBtn = document.querySelector('.close');
-
-            // Add click event to all subjects
             document.querySelectorAll('.subject').forEach(subject => {
                 subject.addEventListener('click', function() {
-                    const content = this.getAttribute('data-content');
-                    const connections = this.getAttribute('data-connections');
-                    const title = this.querySelector('.subject-title').textContent;
+                    const isSelected = this.classList.contains('selected');
+                    
+                    // Remove all highlights and selections
+                    document.querySelectorAll('.subject').forEach(s => {
+                        s.classList.remove('highlighted');
+                        s.classList.remove('selected');
+                    });
 
-                    modalTitle.textContent = title;
-                    modalContent.innerHTML = content.replace(/<br\/?>-\s*/g, '<br/>• ');
+                    if (!isSelected) {
+                        // Add selected class to the clicked subject
+                        this.classList.add('selected');
 
-                    const connectionIds = connections ? connections.split(',') : [];
-
-                    // Display connections
-                    if (connectionIds.length > 0) {
-                        const connectionItems = connectionIds.map(id => {
+                        // Highlight connected subjects
+                        const connections = this.getAttribute('data-connections');
+                        const connectionIds = connections ? connections.split(',') : [];
+                        
+                        connectionIds.forEach(id => {
                             const connSubject = document.getElementById(id.trim());
                             if (connSubject) {
-                                const connTitle = connSubject.querySelector('.subject-title').textContent;
-                                const connContent = connSubject.getAttribute('data-content');
-                                const contentItems = connContent
-                                    .split(/<br\/?>/)
-                                    .map(item => item.replace(/-\s*/, '').trim())
-                                    .filter(item => item)
-                                    .map(item => `<li>${item}</li>`)
-                                    .join('');
-                                return `<div><h4>${connTitle}</h4><ul>${contentItems}</ul></div>`;
+                                connSubject.classList.add('highlighted');
                             }
-                            return '';
-                        }).join('');
-                        modalConnections.innerHTML = connectionItems;
-                    } else {
-                        modalConnections.innerHTML = 'Ninguna';
+                        });
                     }
-
-                    modal.style.display = 'block';
-
-                    // Highlight connected subjects
-                    document.querySelectorAll('.subject').forEach(s => s.classList.remove('highlighted'));
-                    connectionIds.forEach(id => {
-                        const connSubject = document.getElementById(id.trim());
-                        if (connSubject) connSubject.classList.add('highlighted');
-                    });
                 });
             });
-
-            // Close modal when clicking close button
-            closeBtn.onclick = function() {
-                modal.style.display = 'none';
-                document.querySelectorAll('.subject').forEach(s => s.classList.remove('highlighted'));
-            }
-
-            // Close modal when clicking outside
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                    document.querySelectorAll('.subject').forEach(s => s.classList.remove('highlighted'));
-                }
-            }
-
         </script>
     </div>
 </body>
