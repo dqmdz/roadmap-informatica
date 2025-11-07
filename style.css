@@ -1,0 +1,259 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #50e3c2;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius: 15px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 40px;
+    position: relative;
+}
+
+.year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.year-label {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.4);
+}
+
+.subjects-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.subject {
+    background: var(--card-background);
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    position: relative;
+}
+
+.subject:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px var(--shadow-color);
+}
+
+.subject-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.subject-content {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.4;
+}
+
+.connection-line {
+    position: absolute;
+    background: #ccc;
+    z-index: -1;
+}
+
+.connection-line.horizontal {
+    height: 2px;
+    width: 100%;
+    top: -30px;
+    left: 0;
+}
+
+.connection-line.vertical {
+    width: 2px;
+    height: 50px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+
+.year:not(:last-child)::after {
+    content: '▼';
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 30px 40px;
+    background: #eef2f7;
+    border-top: 1px solid #e0e0e0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stat div:last-child {
+    font-size: 1em;
+    color: #555;
+    font-weight: 300;
+}
+
+.selected {
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 8px 25px rgba(80, 227, 194, 0.6) !important;
+    transform: translateY(-5px) scale(1.02);
+}
+
+.highlighted {
+    background: var(--secondary-color) !important;
+    color: white !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.highlighted .subject-title {
+    color: white;
+}
+
+.highlighted .subject-content {
+    color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .header {
+        padding: 30px;
+    }
+    .header h1 {
+        font-size: 2em;
+    }
+    .header h2 {
+        font-size: 1.2em;
+    }
+    .flowchart {
+        padding: 20px;
+        gap: 40px;
+    }
+    .year-label {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    .subject {
+        width: 150px;
+        padding: 15px;
+    }
+    .subject-title {
+        font-size: 1em;
+    }
+    .subject-content {
+        font-size: 0.8em;
+    }
+    .year:not(:last-child)::after {
+        bottom: -25px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .subjects-row {
+        gap: 15px;
+    }
+    .subject {
+        width: 120px;
+        padding: 10px;
+    }
+    .stats {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        padding: 20px;
+    }
+    .stat-number {
+        font-size: 2em;
+    }
+}
